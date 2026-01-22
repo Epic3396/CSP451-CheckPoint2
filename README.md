@@ -1,3 +1,6 @@
+## Team Notes
+- DB: TBD
+
 # CSP451 Web Starter — Week 2 Checkpoint 2
 
 This repository is a **starter template** for practicing:
