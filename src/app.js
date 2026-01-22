@@ -55,6 +55,9 @@ const { router: apiRouter } = require("./routes/api");
 const { router: viewRouter } = require("./routes/views");
 
 const app = express();
+const apiRoutes = require("./routes/api.routes");
+app.use("/api", apiRoutes);
+
 
 // Body parsing
 app.use(express.json());
