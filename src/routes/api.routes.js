@@ -1,3 +1,9 @@
+const { getConnectionStatus } = require("../api/db");
+// GET /api/db
+router.get("/db", (req, res) => {
+  res.json(getConnectionStatus());
+});
+
 const express = require("express");
 const router = express.Router();
 
