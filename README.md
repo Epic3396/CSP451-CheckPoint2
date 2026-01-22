@@ -1,3 +1,14 @@
+## API Endpoints
+
+When the server is running (`npm run dev`) you can test:
+
+- GET /api/health
+- GET /api/info
+- GET /api/users
+- GET /api/db
+
+
+
 ## Team Notes
 - Auth: TBD
 - DB: TBD
