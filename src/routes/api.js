@@ -8,19 +8,20 @@ router.get("/health", (req, res) => {
 
 // POST /api/login
 router.post("/login", (req, res) => {
-  const username = String(req.body.username ?? "").trim();
+  const email = String(req.body.email ?? "").trim();
   const password = String(req.body.password ?? "");
 
   const errors = [];
-  if (!username) errors.push("Username is required.");
-  if (password.length < 8) errors.push("Password must be at least 8 characters.");
+  if (!email) errors.push("Email is required.");
+  if (!email.includes("@")) errors.push("Email must be valid.");
+  if (password.length < 6) errors.push("Password must be at least 6 characters.");
 
   if (errors.length) {
     return res.status(400).json({ ok: false, errors });
   }
 
   // fake login for checkpoint (no DB yet)
-  return res.json({ ok: true, user: { username } });
+  return res.json({ ok: true, user: { email } });
 });
 
 module.exports = { router };
